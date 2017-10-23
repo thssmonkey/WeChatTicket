@@ -1,0 +1,5 @@
+{% if not activities %}目前没有活动哟～
+{% else %}最新活动：
+{% for activity in activities %}
+<a href="{{ handler.url_book_what }}{{ activity.id }}"> {{activity.name}} </a>
+{% endfor %}{% endif %}
